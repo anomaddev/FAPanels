@@ -34,6 +34,9 @@ open class FAPanelConfigurations: NSObject {
         super.init()
     }
 
+    // custom - @anomaddev
+    /// disables the 'tap gesture to close' on the center panel
+    open var canRecognizeCenterTap: Bool = true
     
     // overrides leftPanelGapPercentage
     

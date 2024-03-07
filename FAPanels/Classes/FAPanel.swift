@@ -535,7 +535,7 @@ open class FAPanelController: UIViewController {
                     _tapView?.backgroundColor = configs.colorForTapView
                     _tapView?.frame = centerPanelContainer.bounds
                     _tapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-                    addTapGestureToView(view: _tapView!)
+                    if configs.canRecognizeCenterTap { addTapGestureToView(view: _tapView!) }
                     if configs.canRecognizePanGesture { addPanGesture(toView: _tapView!) }
                     centerPanelContainer.addSubview(_tapView!)
                 }
